@@ -1,0 +1,135 @@
+body {
+  font-family: sans-serif;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .progress {
+  height: 88%;
+  width: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (max-aspect-ratio: 1/1) {
+  .main-container .progress {
+    width: 88%;
+    height: 93%;
+  }
+}
+.main-container .progress .progress__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-size: 30px;
+}
+.main-container .progress .progress__content {
+  width: 72%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-aspect-ratio: 1/1) {
+  .main-container .progress .progress__content {
+    flex-direction: column;
+    height: 72%;
+    width: 50%;
+  }
+}
+.main-container .progress .progress__content .progress__diagram-container {
+  height: 100%;
+}
+.main-container .progress .progress__content .progress__diagram-container .progress__diagram {
+  height: 100%;
+}
+@media (max-aspect-ratio: 1/1) {
+  .main-container .progress .progress__content .progress__diagram-container {
+    width: 100%;
+    height: auto;
+  }
+  .main-container .progress .progress__content .progress__diagram-container .progress__diagram {
+    width: 100%;
+  }
+}
+.main-container .progress .progress__content .progress__diagram_rotate {
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.main-container .progress .progress__content .progress__control-panel {
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-aspect-ratio: 1/1) {
+  .main-container .progress .progress__content .progress__control-panel {
+    height: 30%;
+  }
+}
+@media (min-width: 600px), (min-height: 600px) {
+  .main-container .progress .progress__content .progress__control-panel {
+    font-size: 20px;
+  }
+}
+.main-container .progress .progress__content .progress__control-panel .progress__control-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-container .progress .progress__content .progress__control-panel .progress__control-item svg, .main-container .progress .progress__content .progress__control-panel .progress__control-item .input-box {
+  width: 40px;
+}
+@media (min-width: 600px), (min-height: 600px) {
+  .main-container .progress .progress__content .progress__control-panel .progress__control-item svg, .main-container .progress .progress__content .progress__control-panel .progress__control-item .input-box {
+    width: 60px;
+  }
+}
+.main-container .progress .progress__content .progress__control-panel .progress__control-item svg circle, .main-container .progress .progress__content .progress__control-panel .progress__control-item .input-box circle {
+  transition-property: transform, fill;
+  transition-duration: 0.5s;
+}
+.main-container .progress .progress__content .progress__control-panel .progress__control-item svg rect, .main-container .progress .progress__content .progress__control-panel .progress__control-item .input-box rect {
+  transition: fill 0.5s;
+}
+.main-container .progress .progress__content .progress__control-panel .progress__control-item p {
+  padding-left: 10px;
+}
+.main-container .progress .progress__content .progress__control-panel .progress__control-item .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.main-container .progress .progress__content .progress__control-panel .progress__control-item .input-box input {
+  position: absolute;
+  left: 0;
+  width: 80%;
+  padding: 0 10%;
+  text-align: center;
+  margin: 0;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
