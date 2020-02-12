@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <link rel='stylesheet' href='dist/css/styles.css' />
+        <title>Progress</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="progress">
+                <p class='progress__header'>Progress</p>
+                <div class='progress__content'>
+                    <div class='progress__diagram-container' id='progress__diagram-container'>
+                        <svg viewBox="0 0 36 36" class="progress__diagram" id='progress__diagram'>
+                            <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#ededea" stroke-width="2"></circle>
+                            <circle id="segment" cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#feda4d" stroke-width="2" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
+                        </svg>
+                    </div>
+                    <div class="progress__control-panel">
+                        <div class="progress__control-item">
+                            <div class="input-box">
+                                <svg width='100%' viewBox='0 0 40 24'>
+                                    <rect x='1' y='1' width='38' height='22' rx='12' fill='none' stroke='#494949' stroke-width='1'/>
+                                </svg>
+                                <input id='value' type='text' maxlength="3" >
+                            </div>
+                            <p>Value</p>
+                        </div>
+                        <div class="progress__control-item">
+                            <svg viewBox='0 0 40 24' id='animation-checkbox'>
+                                <rect x='0' y='0' width='40' height='24' rx='12' fill='#494949' />
+                                <circle cx='12' cy='12' r='11' fill='#d6d6d6' />
+                            </svg>
+                            <p>Animate</p>
+                        </div>
+                        <div class="progress__control-item">
+                            <svg viewBox='0 0 40 24' id='hide-checkbox'>
+                                <rect x='0' y='0' width='40' height='24' rx='12' fill='#494949' />
+                                <circle cx='12' cy='12' r='11' fill='#d6d6d6' />
+                            </svg>
+                            <p>Hide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src='src/js/index.js'></script>
+    </body>
+</html>
