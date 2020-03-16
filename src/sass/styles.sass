@@ -27,101 +27,102 @@ body
     justify-content: center
     align-items: center
 
-    .progress
-        height: 88%
-        width: 93%
-        display: flex
-        justify-content: center
-        align-items: center
-        position: relative
+.progress
+    height: 88%
+    width: 93%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
 
-        @media (max-aspect-ratio: 1/1)
-            width: 88%
-            height: 93%
+    @media (max-aspect-ratio: 1/1)
+        width: 88%
+        height: 93%
             
-        .progress__header
-            position: absolute
-            top: 0
-            left: 0
-            margin: 0
-            font-size: 30px
+.progress__header
+    position: absolute
+    top: 0
+    left: 0
+    margin: 0
+    font-size: 30px
 
-        .progress__content
-            width: 72%
-            height: 50%
-            display: flex
-            flex-direction: row
-            justify-content: space-around
-            align-items: center
+.progress__content
+    width: 72%
+    height: 50%
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
 
-            @media ( max-aspect-ratio: 1/1 )
-                flex-direction: column
-                height: 72%
-                width: 50%
+    @media ( max-aspect-ratio: 1/1 )
+        flex-direction: column
+        height: 72%
+        width: 50%
 
-            .progress__diagram-container
-                height: 100%
-                .progress__diagram
-                    height: 100%
+.progress__diagram-container
+    height: 100%
+    @media ( max-aspect-ratio: 1/1 )
+        width: 100%
+        height: auto
 
-                @media ( max-aspect-ratio: 1/1 )
-                    width: 100%
-                    height: auto
-                    .progress__diagram
-                        width: 100%
+.progress__diagram
+    height: 100%
+    @media ( max-aspect-ratio: 1/1 )
+        width: 100%
 
-            .progress__diagram_rotate
-                animation-name: rotation
-                animation-duration: 5s
-                animation-iteration-count: infinite
-                animation-timing-function: linear
+.progress__diagram_rotate
+    animation-name: rotation
+    animation-duration: 5s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
 
-            .progress__control-panel
-                display: flex
-                height: 70%
-                flex-direction: column
-                justify-content: space-between
+.progress__control-panel
+    display: flex
+    height: 70%
+    flex-direction: column
+    justify-content: space-between
 
-                @media ( max-aspect-ratio: 1/1 )
-                    height: 30%
-                    
-
-                @media ( min-width: 600px ), ( min-height: 600px )
-                    font-size: 20px
+    @media ( max-aspect-ratio: 1/1 )
+        height: 30%
+        
+    @media ( min-width: 600px ), ( min-height: 600px )
+        font-size: 20px
                         
-                .progress__control-item
-                    display: flex
-                    flex-direction: row
-                    justify-content: flex-start
-                    align-items: center
-                    svg, .input-box
-                        width: 40px
-                        @media ( min-width: 600px ), ( min-height: 600px )
-                            width: 60px   
+.control-panel__item
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
 
-                        circle
-                            transition-property: transform, fill
-                            transition-duration: .5s
-                        rect
-                            transition: fill .5s
+.input-box__frame, .checkbox
+    width: 40px
+    @media ( min-width: 600px ), ( min-height: 600px )
+        width: 60px   
 
-                    p
-                        padding-left: 10px
+.checkbox-circle
+    transition-property: transform, fill
+    transition-duration: .5s
 
-                    .input-box
-                        position: relative
-                        display: flex
-                        align-items: center
+.checkbox-rect
+    transition: fill .5s
 
-                        input   
-                            position: absolute
-                            left: 0
-                            width: 80%
-                            padding: 0 10%
-                            text-align: center
-                            margin: 0
-                            font-size: inherit
-                            background-color: transparent
-                            border: none
-                            outline: none
+.control-panel__text
+    padding-left: 10px
+
+.input-box
+    position: relative
+    display: flex
+    align-items: center
+
+.input-box__input   
+    position: absolute
+    left: 0
+    width: 80%
+    padding: 0 10%
+    text-align: center
+    margin: 0
+    font-size: inherit
+    background-color: transparent
+    border: none
+    outline: none
                     

@@ -17,29 +17,29 @@
                             <circle id="segment" cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#feda4d" stroke-width="2" stroke-dasharray="0 100" stroke-dashoffset="25"></circle>
                         </svg>
                     </div>
-                    <div class="progress__control-panel">
-                        <div class="progress__control-item">
+                    <div class="progress__control-panel control-panel">
+                        <div class="control-panel__item">
                             <div class="input-box">
-                                <svg width='100%' viewBox='0 0 40 24'>
+                                <svg width='100%' viewBox='0 0 40 24' class="input-box__frame">
                                     <rect x='1' y='1' width='38' height='22' rx='12' fill='none' stroke='#494949' stroke-width='1'/>
                                 </svg>
-                                <input id='value' type='text' maxlength="3" >
+                                <input class='input-box__input' id='value' type='text' maxlength="3" >
                             </div>
-                            <p>Value</p>
+                            <p class="control-panel__text">Value</p>
                         </div>
-                        <div class="progress__control-item">
-                            <svg viewBox='0 0 40 24' id='animation-checkbox'>
-                                <rect x='0' y='0' width='40' height='24' rx='12' fill='#494949' />
-                                <circle cx='12' cy='12' r='11' fill='#d6d6d6' />
+                        <div class="control-panel__item">
+                            <svg viewBox='0 0 40 24' id='animation-checkbox' class="checkbox">
+                                <rect class='checkbox__rect' x='0' y='0' width='40' height='24' rx='12' fill='#494949' />
+                                <circle class='checkbox__circle' cx='12' cy='12' r='11' fill='#d6d6d6' />
                             </svg>
-                            <p>Animate</p>
+                            <p class="control-panel__text">Animate</p>
                         </div>
-                        <div class="progress__control-item">
-                            <svg viewBox='0 0 40 24' id='hide-checkbox'>
-                                <rect x='0' y='0' width='40' height='24' rx='12' fill='#494949' />
-                                <circle cx='12' cy='12' r='11' fill='#d6d6d6' />
+                        <div class="control-panel__item">
+                            <svg viewBox='0 0 40 24' id='hide-checkbox' class="checkbox">
+                                <rect class='checkbox__rect' x='0' y='0' width='40' height='24' rx='12' fill='#494949' />
+                                <circle class='checkbox__circle' cx='12' cy='12' r='11' fill='#d6d6d6' />
                             </svg>
-                            <p>Hide</p>
+                            <p class="control-panel__text">Hide</p>
                         </div>
                     </div>
                 </div>
