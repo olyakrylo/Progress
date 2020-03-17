@@ -1,26 +1,26 @@
-document.getElementById('value').addEventListener('change', (e) => {
+document.querySelector('.input-box__input').addEventListener('change', (e) => {
     let value = e.target.value;
     if (value >= 0 && value <= 100) {
         let res = value.toString() + " " + (100 - value).toString();
-        document.getElementById('segment').setAttribute('stroke-dasharray', res);
+        document.querySelector('#segment').setAttribute('stroke-dasharray', res);
     }
 })
 
 function on(checkbox) {
-    checkbox.getElementsByTagName('rect')[0].style.fill = '#7ed221';
-    checkbox.getElementsByTagName('circle')[0].style.fill = '#fff';
-    checkbox.getElementsByTagName('circle')[0].style.transform = 'translateX(16px)';
+    checkbox.querySelector('rect').style.fill = '#7ed221';
+    checkbox.querySelector('circle').style.fill = '#fff';
+    checkbox.querySelector('circle').style.transform = 'translateX(16px)';
 }
 
 function off(checkbox) {
-    checkbox.getElementsByTagName('rect')[0].style.fill = '#494949';
-    checkbox.getElementsByTagName('circle')[0].style.fill = '#d6d6d6';
-    checkbox.getElementsByTagName('circle')[0].style.transform = 'translateX(0)';
+    checkbox.querySelector('rect').style.fill = '#494949';
+    checkbox.querySelector('circle').style.fill = '#d6d6d6';
+    checkbox.querySelector('circle').style.transform = 'translateX(0)';
 }
 
-let diagram = document.getElementById('progress__diagram')
+let diagram = document.querySelector('.progress__diagram')
 
-let hideCheckbox = document.getElementById('hide-checkbox')
+let hideCheckbox = document.querySelector('#hide-checkbox')
 let isVisible = true
 
 hideCheckbox.addEventListener('click', () => {
@@ -35,7 +35,7 @@ hideCheckbox.addEventListener('click', () => {
     }
 })
 
-let animationCheckbox = document.getElementById('animation-checkbox')
+let animationCheckbox = document.querySelector('#animation-checkbox')
 let isRotating = false;
 
 animationCheckbox.addEventListener('click', () => {
